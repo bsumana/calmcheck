@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CalmCheck+</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header>
+        <h1>CalmCheck+</h1>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul class="tab-list" role="tablist">
+            <li role="presentation">
+                <button id="tab-home" role="tab" aria-selected="true" aria-controls="panel-home" tabindex="0">Home</button>
+            </li>
+            <li role="presentation">
+                <button id="tab-breathing" role="tab" aria-selected="false" aria-controls="panel-breathing" tabindex="-1">Breathing</button>
+            </li>
+            <li role="presentation">
+                <button id="tab-grounding" role="tab" aria-selected="false" aria-controls="panel-grounding" tabindex="-1">Grounding</button>
+            </li>
+            <!-- TODO: Add "Anxiety Check" tab here -->
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <section id="panel-home" role="tabpanel" aria-labelledby="tab-home">
+            <h2>Welcome to CalmCheck+</h2>
+            <p>A simple, calming mental‑wellness aid for students.</p>
+            <div class="cards">
+                <a href="#" class="card" data-target="breathing">
+                    <h3>Breathing Exercise</h3>
+                </a>
+                <a href="#" class="card" data-target="grounding">
+                    <h3>Grounding Technique</h3>
+                </a>
+            </div>
+        </section>
+
+        <section id="panel-breathing" role="tabpanel" aria-labelledby="tab-breathing" hidden>
+            <!-- Breathing UI will be injected by js/breathing.js -->
+            <div id="breathing-container"></div>
+        </section>
+
+        <section id="panel-grounding" role="tabpanel" aria-labelledby="tab-grounding" hidden>
+            <!-- Grounding UI will be injected by js/grounding.js -->
+            <div id="grounding-container"></div>
+        </section>
+        <!-- TODO: Add "Anxiety Check" panel here -->
+    </main>
+
+    <footer>
+        <p>Screening and wellness aid, not medical advice.</p>
+        <a href="pages/help.html" id="help-link">Need help now?</a>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/breathing.js"></script>
+    <script src="js/grounding.js"></script>
+</body>
+</html>
